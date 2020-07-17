@@ -30,8 +30,18 @@ input[type=text], select {
     border: 1px solid #ccc;
     border-radius: 4px;
     margin-right:0;
+    text-align:left;
     box-sizing: border-box;
   }
+
+
+  .border{
+width: 5%;
+display: inline-block;
+  
+}
+
+
   p{
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     color:#9381FF;
