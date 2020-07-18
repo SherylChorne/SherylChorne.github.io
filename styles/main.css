@@ -66,9 +66,8 @@ width: 5%;
   .PREORDER p{
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     color:#8e8ef7;
-    text-decoration: bold;
+   font-weight: bold;
    background-color: linear-gradient(to top, #9890e3 0%, #b1f4cf 100%);
-   
     font-size: 25px;
     text-align: left;
   }

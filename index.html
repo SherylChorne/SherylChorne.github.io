@@ -1,135 +1,132 @@
 <!DOCTYPE html>
 <html>
-
 <head>
-    <meta charset="utf-8">
-    <link rel="stylesheet" href="styles/main.css">
-    <title>Save Web Form Data to Spreadsheets - Contact Form</title>
-<script
-  src="https://code.jquery.com/jquery-3.4.1.js"
-  integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
-  crossorigin="anonymous"></script>
-<script>
-function SubForm (){
-    $.ajax({
-        url:'https://api.apispreadsheets.com/data/724/',
-        type:'post',
-        data:$("#myForm").serializeArray(),
-        success: function(){
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="styles/main.css">
+  <title>Save Web Form Data to Spreadsheets - Contact Form</title>
+  <script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+    crossorigin="anonymous"></script>
+  <script>
+    function SubForm() {
+      $.ajax({
+        url: 'https://api.apispreadsheets.com/data/724/',
+        type: 'post',
+        data: $("#myForm").serializeArray(),
+        success: function () {
           alert("Form Data Submitted :)")
         },
-        error: function(){
+        error: function () {
           alert("There was an error :(")
         }
-    });
-}
-</script>
-</head>
-    
+      });
+    }
+  </script>
 </head>
 
 <body>
-    <nav>
-      <div class="topnav">
-      <ul>
-        <li><a class="active" href="index.html">Home</a></li>
-        <li><a class="active" href="contacts.html">Contacts</a></li>
-        <li><a href="aboutus.html">Aboutus</a></li>
-        
-       </ul>
-      </div>
-  
-    
-    </nav>
-    <form id="myForm">
-  
+
+  <form id="myForm">
+
     <p>2COOL FACE MASKS</p>
     <div>
-    <iframe width="480" height="270" src="https://www.powtoon.com/embed/fQgvMFkVsMi/" frameborder="0" allowfullscreen></iframe>
+      <iframe width="480" height="270" src="https://www.powtoon.com/embed/fQgvMFkVsMi/" frameborder="0"
+        allowfullscreen></iframe>
     </div>
-    
-    <div>
+
+    <!-- <div> -->
     <div class="PREORDER">
-    <p>PREORDER NOW</p>
-</div>
-</div>
+      <p>PREORDER NOW</p>
+    </div>
+    <!-- </div> -->
 
     <form action="index.html">
-        <label for="name">Name</label>
-        <input type="text" id="name" name="name" placeholder="Your name..">
-        
-        <label for="email">Email Address</label>
-        <input type="email" id="email" name="email" placeholder="Your email..">
-    </br>
-    <br>
-  
-    <label>Gender</label>
+      <label for="name">Name</label>
+      <input type="text" id="name" name="name" placeholder="Your name..">
 
-        <div class="border">
+      <label for="email">Email Address</label>
+      <input type="email" id="email" name="email" placeholder="Your email..">
+      </br>
+      <br>
+
+      <label>Gender</label>
+
+      <div class="border">
         <input type="radio" id="male" name="gender" value="male">
-        
-<label for="male">Male</label>
+
+        <label for="male">Male</label>
       </div>
-        
-       
-        <div class="border">
+
+
+      <div class="border">
         <input type="radio" id="female" name="gender" value="female">
         <label for="female">Female</label>
       </div>
 
-<div class="border">
+      <div class="border">
         <input type="radio" id="other" name="gender" value="other">
-      <label for="other">Other</label>
-</div>
+        <label for="other">Other</label>
+      </div>
 
 
-<br>
-<label>Age</label>
-</br>
-<label>
-<div class="border">
-<input type="radio" id="age" name="age" value="15-30" /> 15-30
-</div>
-<div class="border">
-<input type="radio" id="age" name="age" value="31-50" /> 31-50<br/>
-</div>
-<div class="border">
-<input type="radio" id="age" name="age" value="51-70" /> 51-70<br/>
-</div>
-<div class="border">
-<input type="radio" id="age" name="age" value="71-90" /> 71-90<br/>
-</div>
-<div class="border">
-<input type="radio" id="age" name="age" value="91+" /> 91+<br/>
-</label>
-</div>
+      <br>
+      <label>Age</label>
+      </br>
+      <label>
+        <div class="border">
+          <input type="radio" id="age" name="age" value="15-30" /> 15-30
+        </div>
+        <div class="border">
+          <input type="radio" id="age" name="age" value="31-50" /> 31-50
+        </div>
+        <div class="border">
+          <input type="radio" id="age" name="age" value="51-70" /> 51-70
+        </div>
+        <div class="border">
+          <input type="radio" id="age" name="age" value="71-90" /> 71-90
+        </div>
+        <div class="border">
+          <input type="radio" id="age" name="age" value="91+" /> 91+</div>
+      </label>
+      </div>
 
-<br/>
-<label>Feedback</label>
-<br/>
-<textarea name="feedback">
+      </br>
+      <label>Feedback</label>
+      <br/>
+      <textarea name="feedback">
 </textarea>
-<br/>
+      <br/>
 
 
 
 
 
-        <label for="country">Country</label>
-        <select id="country" name="country">
-            <option value="australia">Australia</option>
-            <option value="canada">Canada</option>
-            <option value="china">China</option>
-            <option value="uk">UK</option>
-            <option value="usa">USA</option>
-            
-          </select>
-        
-        
+      <label for="country">Country</label>
+      <select id="country" name="country">
+        <option value="usa">USA</option>
+
+      </select>
+
+
     </form>
-    
-        <button onclick="SubForm()">Submit</button>
-  
+
+
+    <button onclick="SubForm()">Submit</button>
+
+
+
+
+    <nav>
+      <div class="topnav">
+        <ul>
+          <li><a class="active" href="index.html">Home</a></li>
+          <li><a class="active" href="contacts.html">Contacts</a></li>
+          <li><a href="aboutus.html">Aboutus</a></li>
+        </ul>
+      </div>
+
+
+    </nav>
+
 
 </body>
 
